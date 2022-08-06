@@ -26,11 +26,11 @@ Functions:
 ``` Lua
 KeyCombination:BindCombo(str :string, Action :(any)->(any))
 ```
-* 应用结果 Release Key Input
-``` Lua
-KeyCombination:Release(KeyCode: Enum.KeyCode, ...) -- Should be placed under input event
-```
 * 快速安装 Simple Setup
 ``` Lua
 KeyCombination:SimpleSetup()
+```
+* 应用结果 Release Key Input ( 没有使用 `SimpleSetup()` 的时候使用 Use it when `SimpleSetup()` is didn't called. )
+``` Lua
+KeyCombination:Release(KeyCode: Enum.KeyCode, ...) -- Should be placed under input event
 ```
