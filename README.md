@@ -9,8 +9,8 @@ Simple Key Combination system in Roblox
 * * `ANY` 项应当是大写字母 总之是要对应 `KeyCode.Name`
 
 ## |注意事项|   |Matters Needing Attention|
-* **按键名称一定要是KeyCode的完整名字. 比如 `LeftControl`**  
-* **The Key's name must be a KeyCode's FULL NAME. Like `LeftControl`**
+* **按键名称一定要是KeyCode的完整名字. 比如 `LeftControl LeftAlt A`**  
+* **The Key's name must be a KeyCode's FULL NAME. Like `LeftControl LeftAlt A`**
 --------------------------------------------------------
 Example:
 ``` Lua
