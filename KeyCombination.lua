@@ -25,8 +25,8 @@ local KeyCombination = {
 		[Enum.KeyCode.LeftShift]	= 1,
 		[Enum.KeyCode.LeftControl]	= 2,
 		[Enum.KeyCode.LeftAlt]		= 4,
-        [Enum.KeyCode.Tab]          = 8,
-        [Enum.KeyCode.Escape]       = 16,
+        	[Enum.KeyCode.Tab]		= 8,
+        	[Enum.KeyCode.Escape]		= 16,
 	}
 }
 local uis = game:GetService "UserInputService";
