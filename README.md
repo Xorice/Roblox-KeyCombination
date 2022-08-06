@@ -8,7 +8,9 @@ Simple Key Combination system in Roblox
 * 可以使用 `Lib:SimpleSetup()` 快速安装
 * * `ANY` 项应当是大写字母 总之是要对应 `KeyCode.Name`
 
-**按键名称一定要是KeyCode的FullName 比如 `LeftControl`**
+注意事项 Matters needing attention
+* **按键名称一定要是KeyCode的完整名字. 比如 `LeftControl`**  
+* **The Key's name must be a KeyCode's FULL NAME. Like `LeftControl`**
 --------------------------------------------------------
 Example:
 ``` Lua
