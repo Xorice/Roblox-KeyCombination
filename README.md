@@ -9,7 +9,7 @@ Simple Key Combination system in Roblox
 * * `ANY` 项应当是大写字母 总之是要对应 `KeyCode.Name`
 --------------------------------------------------------
 Example:
-```
+``` Lua
 local KeyCombo = Require "KeyCombination";
 KeyCombo:SimpleSetup()
 
