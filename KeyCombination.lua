@@ -7,7 +7,7 @@
 -- * 可以使用 `Lib:SimpleSetup()` 快速安装
 --------------------------------------------------------
 -- Example:
--- ```
+-- ``` Lua
 -- local KeyCombo = Require "KeyCombination";
 -- KeyCombo:SimpleSetup()
 --
