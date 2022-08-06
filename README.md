@@ -16,7 +16,7 @@ KeyCombo:SimpleSetup()
 local function Example()
   print("Hello World!");
 end
-KeyCombo:BindCombo("LeftShift A",Example)
+KeyCombo:BindCombo("LeftShift LeftAlt A",Example)
 
 ```
 * 注: `Release()` 可以加自定义参数 所以用 `SimpleSetup()` 不是必要的
