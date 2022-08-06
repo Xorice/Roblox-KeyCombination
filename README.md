@@ -28,3 +28,4 @@ KeyCombination:BindCombo(str :string, Action :(any)->(any)) -- 绑定按键
 KeyCombination:Release(KeyCode: Enum.KeyCode, ...) -- 应用结果 应当放在Input事件下
 
 KeyCombination:SimpleSetup() -- 快速安装
+```
