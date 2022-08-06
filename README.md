@@ -11,9 +11,7 @@ Simple Key Combination system in Roblox
 ## |注意事项|   |Matters Needing Attention|
 * **按键名称一定要是KeyCode的完整名字. 比如 `LeftControl LeftAlt A`**  
 * **The Key's name must be a KeyCode's FULL NAME. Like `LeftControl LeftAlt A`**
-
-## 支持的按键
-`LeftShift` `LeftControl` `LeftAlt` `Tab` `Escape`
+* 可用的按键: `LeftShift` `LeftControl` `LeftAlt` `Tab` `Escape`
 --------------------------------------------------------
 Example:
 ``` Lua
