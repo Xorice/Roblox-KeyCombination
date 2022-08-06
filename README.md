@@ -7,6 +7,7 @@ Simple Key Combination system in Roblox
 * 要求快捷键长度最低大于 `1`
 * 可以使用 `Lib:SimpleSetup()` 快速安装
 * * `ANY` 项应当是大写字母 总之是要对应 `KeyCode.Name`
+**按键名称一定要是KeyCode的FullName 比如 `LeftControl`**
 --------------------------------------------------------
 Example:
 ``` Lua
