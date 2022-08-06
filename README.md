@@ -22,10 +22,6 @@ KeyCombo:BindCombo("LeftShift A",Example)
 * 注: `Release()` 可以加自定义参数 所以用 `SimpleSetup()` 不是必要的
 --------------------------------------------------------
 Functions:
-``` Lua
-KeyCombination:BindCombo(str :string, Action :(any)->(any)) -- 绑定按键
-
-KeyCombination:Release(KeyCode: Enum.KeyCode, ...) -- 应用结果 应当放在Input事件下
-
-KeyCombination:SimpleSetup() -- 快速安装
-```
+`KeyCombination:BindCombo(str :string, Action :(any)->(any)) -- 绑定按键`
+`KeyCombination:Release(KeyCode: Enum.KeyCode, ...) -- 应用结果 应当放在Input事件下`
+`KeyCombination:SimpleSetup() -- 快速安装`
