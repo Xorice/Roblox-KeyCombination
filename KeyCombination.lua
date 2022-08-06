@@ -26,6 +26,11 @@ SOFTWARE.
 -- More information:
 -- https://github.com/Xorice/Roblox-KeyCombination
 --------------------------------------------------------
+local STRINGs = {
+	'"%s" is not an available key combination. The length is required to be greater than 1.',
+	'The key combination "%s" is already occupied',
+	"The 'SimpleSetup' function has been enabled",
+}
 local KeyCombination = {
 	Action = {};
 	Kvalue = {
@@ -38,8 +43,8 @@ local KeyCombination = {
 }
 local uis = game:GetService "UserInputService";
 function KeyCombination:BindCombo(str :string, Action )
-	local chrs = string.split(str, " ")
-	assert(#chrs>1, str.." 不是可用的热键 要求长度大于 1");
+	local chrs = string.split(str, " ");
+	assert(#chrs>1, string.format(STRINGs[1],str));
 
 	local cost = 0;
 	for i, chr in ipairs(chrs) do
@@ -51,7 +56,7 @@ function KeyCombination:BindCombo(str :string, Action )
 	end
 
 	local actionName = cost..table.concat(chrs);
-	assert(self.Action[actionName]==nil, str.." 该热键已经被占用");
+	assert(self.Action[actionName]==nil, string.format(STRINGs[2],str));
 	self.Action[actionName] = Action;
 end;
 
@@ -60,7 +65,7 @@ function KeyCombination:Release(KeyCode, ...)
 
 	local cost = 0;
 	for valuedKey, value in next, self.Kvalue do
-		local pressed = uis:IsKeyDown(valuedKey)
+		local pressed = uis:IsKeyDown(valuedKey);
 		if pressed then
 			cost = cost + value;
 		end
@@ -69,12 +74,12 @@ function KeyCombination:Release(KeyCode, ...)
 	local actionName = cost..keyName;
 	local Action = self.Action[actionName];
 	if Action then
-		return Action(...)
+		return Action(...);
 	end
 end;
 
 function KeyCombination:SimpleSetup()
-	assert(self.connection==nil, "已经启用过了`SimpleSetup`功能")
+	assert(self.connection==nil, STRINGs[2])
 	self.connection = uis.InputBegan:Connect(function(input,gp)
 		if gp then
 			return
