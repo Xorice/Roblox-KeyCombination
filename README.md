@@ -1,7 +1,8 @@
 # KeyCombination For Roblox
 Simple Key Combination system in Roblox
 
-## 欢迎使用KeyCombination 这是一款为Roblox打造的简单快捷键绑定系统
+## 欢迎使用KeyCombination
+这是一款为Roblox打造的简单快捷键绑定系统
 * 本库仅支持简单快捷键 格式 `ctrl + alt + shift + tab + esc + ANY` (可选
 * 要求快捷键长度最低大于 `1`
 * 可以使用 `Lib:SimpleSetup()` 快速安装
