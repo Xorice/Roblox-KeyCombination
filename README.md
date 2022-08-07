@@ -11,7 +11,7 @@ Simple Key Combination system in Roblox
 ## |注意事项|   |Matters Needing Attention|
 * 可用的KeyCode: `LeftShift` `LeftControl` `LeftAlt` `Tab` `Escape` `Space` `Return` `ANY`   
 * 可用的简写 (不区分大小写): `shift` `ctrl` `alt` `tab` `esc` `space` `enter`   
-* 为了效率 本库没有Key Buffer. 所以不支持像 `ctrl+k s` 这样的组合键
+* 为了效率 本库没有Key Buffer. 所以不支持像 `ctrl+k s` 这样的复合组合键
 --------------------------------------------------------
 Example:
 ``` Lua
