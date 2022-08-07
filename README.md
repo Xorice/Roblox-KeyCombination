@@ -4,13 +4,13 @@ Simple Key Combination system in Roblox
 ## 欢迎使用KeyCombination
 这是一款为Roblox打造的简单快捷键绑定系统
 * 本库仅支持简单快捷键 格式 `ctrl + alt + shift + tab + esc + ANY` (可选
-* 要求快捷键长度最低大于 `1`
 * 可以使用 `Lib:SimpleSetup()` 快速安装
 * * `ANY` 项应当是大写字母 总之是要对应 `KeyCode.Name`
 
 ## |注意事项|   |Matters Needing Attention|
 * 可用的KeyCode: `LeftShift` `LeftControl` `LeftAlt` `Tab` `Escape` `Space` `Return` `ANY`   
 * 可用的简写 (不区分大小写): `shift` `ctrl` `alt` `tab` `esc` `space` `enter`   
+* 要求快捷键长度最低大于 `1`    
 * 为了效率 本库没有Key Buffer. 所以不支持像 `ctrl+k s` 这样的复合组合键
 --------------------------------------------------------
 Example:
