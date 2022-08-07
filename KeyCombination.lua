@@ -31,7 +31,7 @@ local STRINGs = {
 	'The key combination "%s" is already occupied',
 	"The 'SimpleSetup' function has been enabled",
 }
-local KeyCombination = {
+local KeyCombination = { -- Only the following keycodes are supported:
 	Action = {};
 	Kvalue = {
 		[Enum.KeyCode.LeftShift]	= 1,
@@ -39,7 +39,18 @@ local KeyCombination = {
 		[Enum.KeyCode.LeftAlt]		= 4,
 		[Enum.KeyCode.Tab]		= 8,
 		[Enum.KeyCode.Escape]		= 16,
-	}
+		[Enum.KeyCode.Space]		= 32,
+		[Enum.KeyCode.Return]		= 64,
+	};
+	Dictionariy = {
+		["shift"]	= Enum.KeyCode.LeftShift;
+		["ctrl"]	= Enum.KeyCode.LeftControl;
+		["alt"]		= Enum.KeyCode.LeftAlt;
+		["tab"]		= Enum.KeyCode.Tab;
+		["esc"]		= Enum.KeyCode.Escape;
+		["space"]	= Enum.KeyCode.Space;
+		["enter"]	= Enum.KeyCode.Return;
+	};
 }
 local uis = game:GetService "UserInputService";
 function KeyCombination:BindCombo(str :string, Action )
@@ -48,7 +59,8 @@ function KeyCombination:BindCombo(str :string, Action )
 
 	local cost = 0;
 	for i, chr in ipairs(chrs) do
-		local value = self.Kvalue[Enum.KeyCode[chr]]
+		local KeyCode = self.Dictionariy[chr:lower()] or Enum.KeyCode[chr];
+		local value = self.Kvalue[KeyCode];
 		if value then
 			cost = cost + value;
 			chrs[i] = "";
@@ -64,11 +76,14 @@ function KeyCombination:Release(KeyCode, ...)
 	local keyName = KeyCode.Name;
 
 	local cost = 0;
-	for valuedKey, value in next, self.Kvalue do
-		local pressed = uis:IsKeyDown(valuedKey);
-		if pressed then
-			cost = cost + value;
+	for _, input in next, uis:GetKeysPressed() do
+		local value = self.Kvalue[input.KeyCode];
+		if value then
+			cost = cost + value
 		end
+	end
+	if self.Kvalue[KeyCode] then
+		keyName = "";
 	end
 
 	local actionName = cost..keyName;
@@ -79,7 +94,7 @@ function KeyCombination:Release(KeyCode, ...)
 end;
 
 function KeyCombination:SimpleSetup()
-	assert(self.connection==nil, STRINGs[2])
+	assert(self.connection==nil, STRINGs[3])
 	self.connection = uis.InputBegan:Connect(function(input,gp)
 		if gp then
 			return
