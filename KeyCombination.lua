@@ -37,12 +37,12 @@ local KeyCombination = { -- Only the following keycodes are supported:
 		[Enum.KeyCode.LeftShift]	= 1,
 		[Enum.KeyCode.LeftControl]	= 2,
 		[Enum.KeyCode.LeftAlt]		= 4,
-		[Enum.KeyCode.Tab]		= 8,
+		[Enum.KeyCode.Tab]			= 8,
 		[Enum.KeyCode.Escape]		= 16,
 		[Enum.KeyCode.Space]		= 32,
 		[Enum.KeyCode.Return]		= 64,
 	};
-	Dictionariy = {
+	Dictionary = {
 		["shift"]	= Enum.KeyCode.LeftShift;
 		["ctrl"]	= Enum.KeyCode.LeftControl;
 		["alt"]		= Enum.KeyCode.LeftAlt;
@@ -59,7 +59,7 @@ function KeyCombination:BindCombo(str :string, Action )
 
 	local cost = 0;
 	for i, chr in ipairs(chrs) do
-		local KeyCode = self.Dictionariy[chr:lower()] or Enum.KeyCode[chr];
+		local KeyCode = self.Dictionary[chr:lower()] or Enum.KeyCode[chr];
 		local value = self.Kvalue[KeyCode];
 		if value then
 			cost = cost + value;
