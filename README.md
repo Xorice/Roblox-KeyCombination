@@ -9,8 +9,8 @@ Simple Key Combination system in Roblox
 * * `ANY` 项应当是大写字母 总之是要对应 `KeyCode.Name`
 
 ## |注意事项|   |Matters Needing Attention|
-* **The Key's name must be a KeyCode's FULL NAME. Like `LeftControl LeftAlt A`**
-* 可用的按键: `LeftShift` `LeftControl` `LeftAlt` `Tab` `Escape`
+* 可用的KeyCode: `LeftShift` `LeftControl` `LeftAlt` `Tab` `Escape` `Space` `Return` `ANY`   
+* 可用的简写 (不区分大小写): `shift` `ctrl` `alt` `tab` `esc` `space` `enter`   
 --------------------------------------------------------
 Example:
 ``` Lua
@@ -21,6 +21,7 @@ local function Example()
   print("Hello World!");
 end
 KeyCombo:BindCombo("LeftShift LeftAlt A",Example)
+-- It can also be replaced by:  KeyCombo:BindCombo("shift alt A",Example)
 
 ```
 * 注: `Release()` 可以加自定义参数 所以用 `SimpleSetup()` 不是必要的
