@@ -27,6 +27,18 @@ KeyCombo:BindCombo("LeftShift LeftAlt A",Example)
 
 ```
 * 注: `Release()` 可以加自定义参数 所以用 `SimpleSetup()` 不是必要的
+Example Ex:
+``` Lua
+local KeyCombo = Require "KeyCombination";
+
+local function Example(num)
+  print("The number is "..num);
+end
+KeyCombo:BindCombo("shift A",Example)
+
+-- Suppose I held shift ↓
+KeyCombo:Release(Enum.KeyCode.A, 9.0) -- > The number is 9
+```
 --------------------------------------------------------
 Functions:
 * 绑定按键 Bind Key Combination
