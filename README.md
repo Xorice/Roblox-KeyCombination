@@ -21,7 +21,8 @@ local function Example()
   print("Hello World!");
 end
 KeyCombo:BindCombo("LeftShift LeftAlt A",Example)
--- It can also be replaced by:  KeyCombo:BindCombo("shift alt A",Example)
+-- It can be replaced by:  KeyCombo:BindCombo("shift alt A",Example)
+-- Also can be:  KeyCombo:BindCombo("sHiFt AlT A",Example)
 
 ```
 * 注: `Release()` 可以加自定义参数 所以用 `SimpleSetup()` 不是必要的
