@@ -26,7 +26,7 @@ KeyCombo:BindCombo("LeftShift LeftAlt A",Example)
 -- Also can be:  KeyCombo:BindCombo("sHiFt AlT A",Example)
 
 ```
-* 注: `Release()` 可以加自定义参数 所以用 `SimpleSetup()` 不是必要的
+* 注: `Release()` 可以加自定义参数 所以用 `SimpleSetup()` 不是必要的   
 Example Ex:
 ``` Lua
 local KeyCombo = Require "KeyCombination";
